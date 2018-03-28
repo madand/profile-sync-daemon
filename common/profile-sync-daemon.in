@@ -581,7 +581,7 @@ dup_check() {
 				# check that the LAST DIRECTORY in the full path is unique
 				unique_count=$(echo ${DIRArr[@]##*/} |
 				sed 's/ /\n/g' | sort -u | wc -l)
-				if [[ ${#DIRArr[@]##*/} -eq $unique_count ]]; then
+				if [[ ${#DIRArr[@]} -eq $unique_count ]]; then
 					# no problems so do nothing
 					return
 				else
@@ -603,7 +603,7 @@ dup_check() {
 				# check that the LAST DIRECTORY in the full path is unique
 				unique_count=$(echo ${DIRArr[@]##*/} |
 				sed 's/ /\n/g' | sort -u | wc -l)
-				if [[ ${#DIRArr[@]##*/} -eq $unique_count ]]; then
+				if [[ ${#DIRArr[@]} -eq $unique_count ]]; then
 					# no problems so do nothing
 					return
 				else
